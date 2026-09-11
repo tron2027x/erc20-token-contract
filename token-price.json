@@ -1,0 +1,27 @@
+{
+  "token": {
+    "name": "Menahi",
+    "symbol": "MNH",
+    "address": "YOUR_CONTRACT_ADDRESS_HERE",
+    "network": "TRON",
+    "decimals": 6
+  },
+  "price": {
+    "usd": 1.00,
+    "pegged_to": "USDT",
+    "update_frequency": "realtime",
+    "source": "1:1 USDT Peg"
+  },
+  "market_data": {
+    "market_cap": "1000000",
+    "total_supply": 1000000,
+    "circulating_supply": 1000000,
+    "volume_24h": 0
+  },
+  "exchange_rate": {
+    "MNH_to_USDT": 1.0,
+    "USDT_to_MNH": 1.0
+  },
+  "timestamp": "2026-09-11T18:50:25Z",
+  "status": "active"
+}
