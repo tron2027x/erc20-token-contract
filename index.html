@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menahi Token - Official Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin: 0.5rem;
+            border: 2px solid #667eea;
+        }
+        
+        .cta-button:hover {
+            background: #764ba2;
+            border-color: #764ba2;
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            color: white;
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 4rem 2rem;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #e0e0e0;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Token Info Section */
+        .token-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .info-box {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .info-box h4 {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+        
+        .info-box .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        /* Specifications Section */
+        .specs {
+            background: white;
+            padding: 4rem 2rem;
+        }
+        
+        .specs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .spec-item {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .spec-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .spec-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        /* Security Section */
+        .security {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .security-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .security-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .security-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .security-item::before {
+            content: "✓";
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Resources Section */
+        .resources {
+            background: white;
+            padding: 4rem 2rem;
+        }
+        
+        .resources-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .resource-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s;
+        }
+        
+        .resource-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+        }
+        
+        .resource-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">MNH</div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#token">Token</a></li>
+                <li><a href="#specs">Specs</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Menahi Token</h1>
+        <p>A Modern TRC20 Token on TRON Blockchain</p>
+        <p>Stable • Secure • Advanced Features</p>
+        <div>
+            <a href="#token" class="cta-button">Learn More</a>
+            <a href="https://github.com/tron2027x/erc20-token-contract" class="cta-button secondary">View on GitHub</a>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>1:1 USDT Peg</h3>
+                    <p>Stable value pegged to USDT for predictable pricing</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Mint & Burn</h3>
+                    <p>Dynamic supply management capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3>Blacklist</h3>
+                    <p>Owner-controlled address blacklisting</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Dynamic Metadata</h3>
+                    <p>Changeable name, symbol, and logo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Gas Efficient</h3>
+                    <p>Optimized for minimal gas consumption</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Standard Compliant</h3>
+                    <p>Full ERC20/TRC20 compliance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Token Info Section -->
+    <section class="token-info" id="token">
+        <div class="info-container">
+            <h2 class="section-title" style="color: white;">Token Information</h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h4>Token Name</h4>
+                    <div class="value">Menahi</div>
+                </div>
+                <div class="info-box">
+                    <h4>Symbol</h4>
+                    <div class="value">MNH</div>
+                </div>
+                <div class="info-box">
+                    <h4>Network</h4>
+                    <div class="value">TRON</div>
+                </div>
+                <div class="info-box">
+                    <h4>Standard</h4>
+                    <div class="value">TRC20</div>
+                </div>
+                <div class="info-box">
+                    <h4>Decimals</h4>
+                    <div class="value">6</div>
+                </div>
+                <div class="info-box">
+                    <h4>Total Supply</h4>
+                    <div class="value">1,000,000 MNH</div>
+                </div>
+                <div class="info-box">
+                    <h4>Current Price</h4>
+                    <div class="value">$1.00 USD</div>
+                </div>
+                <div class="info-box">
+                    <h4>Market Cap</h4>
+                    <div class="value">$1,000,000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Specifications Section -->
+    <section class="specs" id="specs">
+        <div class="specs-container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Smart Contract</h4>
+                    <p>Solidity 0.8.20 with advanced features and optimizations</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Transfer Function</h4>
+                    <p>Transfer tokens to any address (subject to blacklist restrictions)</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Mint Function</h4>
+                    <p>Owner-only function to create new tokens</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Burn Function</h4>
+                    <p>Permanently remove tokens from circulation</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Approve & TransferFrom</h4>
+                    <p>Standard ERC20 allowance mechanism for delegated transfers</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Ownership Transfer</h4>
+                    <p>Secure mechanism to transfer contract ownership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Security Section -->
+    <section class="security" id="security">
+        <div class="security-container">
+            <h2 class="section-title" style="color: white;">Security Features</h2>
+            <div class="security-list">
+                <div class="security-item">Blacklist Protection - Prevent malicious addresses</div>
+                <div class="security-item">Owner Controls - Mint, burn, and blacklist management</div>
+                <div class="security-item">Standard Compliance - Full ERC20/TRC20 adherence</div>
+                <div class="security-item">Safe Mathematics - No overflow/underflow vulnerabilities</div>
+                <div class="security-item">Immutable Decimals - Cannot be changed after deployment</div>
+                <div class="security-item">Access Control - Secure function permissions</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="resources-container">
+            <h2 class="section-title">Resources & Links</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h4>📄 Token Info</h4>
+                    <p>Complete token information and metadata</p>
+                    <a href="https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/token-info.json">View JSON</a>
+                </div>
+                <div class="resource-card">
+                    <h4>💵 Token Price</h4>
+                    <p>Real-time price and market data</p>
+                    <a href="https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/token-price.json">View JSON</a>
+                </div>
+                <div class="resource-card">
+                    <h4>📚 Introduction</h4>
+                    <p>Comprehensive token introduction and guide</p>
+                    <a href="https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/token-introduction.json">View JSON</a>
+                </div>
+                <div class="resource-card">
+                    <h4>💻 GitHub</h4>
+                    <p>Source code and smart contracts</p>
+                    <a href="https://github.com/tron2027x/erc20-token-contract">View Repository</a>
+                </div>
+                <div class="resource-card">
+                    <h4>🔗 Contract</h4>
+                    <p>Smart contract source code</p>
+                    <a href="https://github.com/tron2027x/erc20-token-contract/blob/main/contracts/Menahi.sol">View Contract</a>
+                </div>
+                <div class="resource-card">
+                    <h4>👤 Creator</h4>
+                    <p>Project creator and maintainer</p>
+                    <a href="https://github.com/tron2027x">GitHub Profile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Menahi Token</h3>
+            <p>A Modern TRC20 Token on TRON Blockchain</p>
+            <div class="footer-links">
+                <a href="https://github.com/tron2027x/erc20-token-contract">GitHub</a>
+                <a href="https://github.com/tron2027x">Creator</a>
+                <a href="#resources">Resources</a>
+            </div>
+            <p style="margin-top: 2rem; opacity: 0.7;">
+                © 2026 Menahi Token. All rights reserved. | Version 1.0.0
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.6;">
+                Disclaimer: Menahi Token is provided as-is. Conduct your own due diligence before transacting.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
