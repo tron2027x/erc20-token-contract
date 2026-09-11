@@ -4,6 +4,11 @@ pragma solidity ^0.8.0;
 /**
  * @title Menahi Token
  * @dev ERC20 Token with blacklist, mint/burn, and logo URL features
+ * Name: Menahi
+ * Symbol: MNH
+ * Decimals: 6
+ * Total Supply: 1 token
+ * Transferable to all wallets directly
  */
 contract Menahi {
     // Token properties
@@ -13,7 +18,7 @@ contract Menahi {
     uint256 public totalSupply = 1 * 10 ** 6; // 1 token with 6 decimals
 
     // Logo URL
-    string public logoURL = "";
+    string public logoURL = "https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/trc.png";
 
     // Mappings
     mapping(address => uint256) public balanceOf;
@@ -117,7 +122,7 @@ contract Menahi {
     // ============ TRANSFER FUNCTIONS ============
 
     /**
-     * @dev Transfer tokens to another address (works with all wallets)
+     * @dev Transfer tokens to another address (works with all wallets directly)
      * @param to The recipient address
      * @param amount The amount of tokens to transfer
      */
