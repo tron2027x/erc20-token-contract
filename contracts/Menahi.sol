@@ -29,13 +29,13 @@ contract Menahi {
     address public owner;
 
     // Events
-    event Transfer(indexed address from, indexed address to, uint256 value);
-    event Approval(indexed address tokenOwner, indexed address spender, uint256 value);
+    event Transfer(indexed address indexed from, indexed address indexed to, uint256 value);
+    event Approval(indexed address indexed tokenOwner, indexed address indexed spender, uint256 value);
     event NameChanged(string oldName, string newName);
     event SymbolChanged(string oldSymbol, string newSymbol);
-    event OwnershipTransferred(indexed address previousOwner, indexed address newOwner);
-    event Blacklisted(indexed address account);
-    event UnBlacklisted(indexed address account);
+    event OwnershipTransferred(indexed address indexed previousOwner, indexed address indexed newOwner);
+    event Blacklisted(indexed address indexed account);
+    event UnBlacklisted(indexed address indexed account);
     event LogoURLChanged(string oldURL, string newURL);
 
     // Constructor
