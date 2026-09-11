@@ -1,0 +1,112 @@
+{
+  "token_introduction": {
+    "name": "Menahi Token",
+    "symbol": "MNH",
+    "full_name": "Menahi",
+    "network": "TRON",
+    "standard": "TRC20",
+    "decimals": 6,
+    "total_supply": 1000000,
+    "logo_url": "https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/trc.png",
+    
+    "description": "Menahi is a modern ERC20/TRC20 token built on the TRON blockchain with advanced features including mint/burn capabilities, blacklist management, and dynamic metadata. Designed for flexibility and security, Menahi provides a robust foundation for token-based applications.",
+    
+    "overview": "Menahi Token is a sophisticated blockchain token engineered to provide stability through its 1:1 USDT peg while maintaining advanced smart contract functionality. With a total supply of 1,000,000 tokens (1 MNH with 6 decimals), Menahi offers a secure, transparent, and feature-rich ecosystem.",
+    
+    "key_features": [
+      "1:1 USDT Peg - Stable value pegged to USDT",
+      "Mint & Burn - Dynamic supply management",
+      "Blacklist Management - Owner can manage restricted addresses",
+      "Dynamic Metadata - Changeable name, symbol, and logo",
+      "Logo URL Support - Integrated logo management",
+      "Ownership Transfer - Secure transfer of contract ownership",
+      "ERC20/TRC20 Compliant - Full standard compliance",
+      "Gas Efficient - Optimized for minimal gas consumption"
+    ],
+    
+    "technical_specifications": {
+      "blockchain": "TRON",
+      "contract_standard": "TRC20 (ERC20 Compatible)",
+      "solidity_version": "0.8.20",
+      "decimals": 6,
+      "initial_supply": 1000000,
+      "total_supply": 1000000,
+      "contract_address": "YOUR_CONTRACT_ADDRESS_HERE",
+      "owner": "YOUR_OWNER_ADDRESS_HERE"
+    },
+    
+    "smart_contract_functions": {
+      "transfer": "Transfer tokens to any address (subject to blacklist)",
+      "transferFrom": "Transfer tokens with approval (requires allowance)",
+      "approve": "Approve a spender to use your tokens",
+      "mint": "Owner function to create new tokens",
+      "burn": "Burn tokens from your balance (permanently remove)",
+      "blacklist": "Owner function to blacklist an address",
+      "unBlacklist": "Owner function to remove address from blacklist",
+      "transferOwnership": "Transfer contract ownership to new address",
+      "setLogoURL": "Update token logo URL",
+      "setName": "Change token name",
+      "setSymbol": "Change token symbol"
+    },
+    
+    "use_cases": [
+      "Stablecoin Alternative - 1:1 USDT peg for stable value transactions",
+      "Payment Token - Direct peer-to-peer transfers on TRON network",
+      "Governance Token - Basis for DAO or governance applications",
+      "Liquidity Pool - Integration with DEXs and AMMs",
+      "Token Rewards - Distribution mechanism for applications",
+      "Cross-Border Payments - Low-cost international transactions"
+    ],
+    
+    "security_features": [
+      "Blacklist Protection - Prevent malicious addresses from transferring",
+      "Owner Controls - Mint, burn, and blacklist management",
+      "Standard Compliance - Full ERC20/TRC20 standard adherence",
+      "Immutable Decimals - Cannot be changed after deployment",
+      "Safe Mathematics - No overflow/underflow vulnerabilities"
+    ],
+    
+    "price_information": {
+      "current_price": "$1.00 USD",
+      "peg": "USDT (1:1)",
+      "exchange_rate_mnh_to_usdt": 1.0,
+      "exchange_rate_usdt_to_mnh": 1.0,
+      "price_stability": "Fixed 1:1 ratio"
+    },
+    
+    "market_data": {
+      "total_supply": 1000000,
+      "circulating_supply": 1000000,
+      "market_cap": "$1,000,000 USD",
+      "volume_24h": "Varies by exchange",
+      "network": "TRON"
+    },
+    
+    "links": {
+      "github": "https://github.com/tron2027x/erc20-token-contract",
+      "token_info_json": "https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/token-info.json",
+      "token_price_json": "https://raw.githubusercontent.com/tron2027x/erc20-token-contract/main/token-price.json",
+      "contract_file": "https://github.com/tron2027x/erc20-token-contract/blob/main/contracts/Menahi.sol"
+    },
+    
+    "how_to_use": {
+      "step1": "Deploy contract on TRON network using your Solidity compiler",
+      "step2": "Update contract address in token-info.json and token-price.json",
+      "step3": "Add token to TRON wallets using the contract address",
+      "step4": "Start transacting MNH tokens on TRON network",
+      "step5": "Use owner functions for mint, burn, and blacklist management"
+    },
+    
+    "disclaimer": "Menahi Token is provided as-is. Users should conduct their own due diligence before transacting. The token creator is not responsible for losses or damages resulting from token usage.",
+    
+    "contact": {
+      "creator": "tron2027x",
+      "github_profile": "https://github.com/tron2027x",
+      "repository": "https://github.com/tron2027x/erc20-token-contract"
+    },
+    
+    "version": "1.0.0",
+    "last_updated": "2026-09-11",
+    "status": "Active"
+  }
+}
